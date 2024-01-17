@@ -16,9 +16,9 @@ const AllCountries = () => {
 
       const data = await res.json();
 
-      console.log(data);
+      const limitedData = data.slice(0, 20);
 
-      setCountries(data);
+      setCountries(limitedData);
 
       setIsLoading(false);
     } catch (error) {
